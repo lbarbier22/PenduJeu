@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Jeu {
 
     Scanner scanner = new Scanner(System.in);
+
+    ASCII asciiArt = new ASCII();
     String motADeviner = "";
     int tauxErreur;
     char[] reponse;
@@ -40,7 +42,7 @@ public class Jeu {
             tauxErreur = Integer.parseInt(scanner.nextLine());
         }
 
-        asciiWall();
+        asciiArt.asciiWall();
 
         System.out.println("\nGive me a letter to start ! The word contains " + motADeviner.length() + " letters.");
 
@@ -106,20 +108,4 @@ public class Jeu {
         }
     }
 
-    public void asciiWall() {
-        System.out.println("\n \n \n");
-        System.out.println("********************************************************************************************************************************");
-        System.out.println("         /$$                   /$$   /$$              /$$$$$$$                      /$$");
-        System.out.println("        | $$                  | $$  | $/             | $$__  $$                    |__/");
-        System.out.println("        | $$        /$$$$$$  /$$$$$$|_//$$$$$$$      | $$  \\ $$  /$$$$$$   /$$$$$$  /$$ /$$$$$$$ ");
-        System.out.println("        | $$       /$$__  $$|_  $$_/  /$$_____/      | $$$$$$$  /$$__  $$ /$$__  $$| $$| $$__  $$");
-        System.out.println("        | $$      | $$$$$$$$  | $$   |  $$$$$$       | $$__  $$| $$$$$$$$| $$  \\ $$| $$| $$  \\ $$");
-        System.out.println("        | $$      | $$_____/  | $$ /$$\\____  $$      | $$  \\ $$| $$_____/| $$  | $$| $$| $$  | $$");
-        System.out.println("        | $$$$$$$$|  $$$$$$$  |  $$$$//$$$$$$$/      | $$$$$$$/|  $$$$$$$|  $$$$$$$| $$| $$  | $$");
-        System.out.println("        |________/ \\_______/   \\___/ |_______/       |_______/  \\_______/ \\____  $$|__/|__/  |__/");
-        System.out.println("                                                                          /$$  \\ $$");
-        System.out.println("                                                                          |  $$$$$$/              ");
-        System.out.println("                                                                           \\______/");
-        System.out.println("********************************************************************************************************************************");
-    }
 }
