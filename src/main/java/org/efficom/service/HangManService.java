@@ -1,4 +1,4 @@
-package org.example.service;
+package org.efficom.service;
 
 public interface HangManService {
     void jouer();

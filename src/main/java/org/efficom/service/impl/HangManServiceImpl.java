@@ -1,6 +1,7 @@
-package org.example.service.impl;
+package org.efficom.service.impl;
 
-import org.example.model.AsciiModel;
+import org.efficom.model.AsciiModel;
+import org.springframework.stereotype.Service;
 
 import java.util.IllegalFormatException;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 /**
  * Hello world!
  */
+@Service
 public class HangManServiceImpl {
 
     Scanner scanner = new Scanner(System.in);
