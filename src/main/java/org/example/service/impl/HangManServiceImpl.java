@@ -1,4 +1,6 @@
-package org.example;
+package org.example.service.impl;
+
+import org.example.model.AsciiModel;
 
 import java.util.IllegalFormatException;
 import java.util.Scanner;
@@ -6,11 +8,11 @@ import java.util.Scanner;
 /**
  * Hello world!
  */
-public class Jeu {
+public class HangManServiceImpl {
 
     Scanner scanner = new Scanner(System.in);
 
-    ASCII asciiArt = new ASCII();
+    AsciiModel asciiModelArt = new AsciiModel();
     String motADeviner = "";
     int tauxErreur;
     char[] reponse;
@@ -42,7 +44,7 @@ public class Jeu {
             tauxErreur = Integer.parseInt(scanner.nextLine());
         }
 
-        asciiArt.asciiWall();
+        asciiModelArt.asciiWall();
 
         System.out.println("\nGive me a letter to start ! The word contains " + motADeviner.length() + " letters.");
 
@@ -90,12 +92,9 @@ public class Jeu {
     }
 
     public void demanderJouer() {
-        System.out.println("*****************************");
-        System.out.println("*                           *");
-        System.out.println("*        Welcome to         *");
-        System.out.println("*      the Hangman Game     *");
-        System.out.println("*                           *");
-        System.out.println("*****************************");
+
+        asciiModelArt.asciiWelcome();
+
         System.out.println("Hello ! Do you want to play ? (y/n)\n");
         Scanner scanner = new Scanner(System.in);
         String reponse = scanner.nextLine();

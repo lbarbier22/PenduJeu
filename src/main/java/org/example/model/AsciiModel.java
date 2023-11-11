@@ -1,12 +1,9 @@
-package org.example;
-
-import java.util.IllegalFormatException;
-import java.util.Scanner;
+package org.example.model;
 
 /**
  * Hello world!
  */
-public class ASCII {
+public class AsciiModel {
 
     public void asciiWall() {
         System.out.println("\n \n \n");
@@ -23,5 +20,14 @@ public class ASCII {
         System.out.println("                                                                          |  $$$$$$/              ");
         System.out.println("                                                                           \\______/");
         System.out.println("********************************************************************************************************************************");
+    }
+
+    public void asciiWelcome(){
+        System.out.println("*****************************");
+        System.out.println("*                           *");
+        System.out.println("*        Welcome to         *");
+        System.out.println("*      the Hangman Game     *");
+        System.out.println("*                           *");
+        System.out.println("*****************************");
     }
 }
